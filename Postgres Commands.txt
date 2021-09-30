@@ -189,3 +189,4 @@ psql -d mds -U yasserhu
 
 # Restor Postgres Data Dump through PSQL
 psql -h localhost -U mds -f postgresql-mds_2021-09-29_02-00-00.sql
+psql -h mdspostgres.canadacentral.cloudapp.azure.com -U yasserhu -f mdsrestore.sql -d mds
