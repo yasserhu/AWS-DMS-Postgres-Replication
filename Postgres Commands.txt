@@ -190,3 +190,8 @@ psql -d mds -U yasserhu
 # Restor Postgres Data Dump through PSQL
 psql -h localhost -U mds -f postgresql-mds_2021-09-29_02-00-00.sql
 psql -h mdspostgres.canadacentral.cloudapp.azure.com -U yasserhu -f mdsrestore.sql -d mds
+
+# should be able to select the permit.permit_no after adding those
+LEFT JOIN "mine" ON "public"."mine"."mine_guid" = "public"."mine_report"."mine_guid"
+LEFT JOIN "mine_permit_xref" ON "mine"."mine_guid" = "mine_permit_xref"."mine_guid"
+LEFT JOIN "permit" ON "public"."mine_permit_xref"."permit_id" = "public"."permit"."permit_id"
