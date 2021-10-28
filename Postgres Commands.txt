@@ -168,8 +168,11 @@ ssh -i C:\Users\yasse\OneDrive\Desktop\NTTData\yasserhu.pem yasserhu@20.104.113.
 
 # Connect to postgres server using Postgres superuser
 sudo -u postgres -i
+# Connect to Postgres server specific Database using postgres superuser
+sudo -u postgres psql db_name
 # Exit current user
 Ctrl + D or logout
+or type exit
 
 # To avoid typing sudo every time you execute a command 
 sudo -s
